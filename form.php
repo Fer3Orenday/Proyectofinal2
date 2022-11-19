@@ -56,7 +56,6 @@
    
 </body>
 </html>
-<<<<<<< HEAD
 <?php
 function filtrado($datos)
 {
@@ -77,7 +76,6 @@ if (isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     $sitioweb = filtrado($_POST["sitioweb"]);
 }
 ?> 
-=======
 
 <?php if (isset($_POST["submit"])) : ?>
     <h2>Mostrar datos enviados</h2>
@@ -119,5 +117,14 @@ if (isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
         $sitioweb = filtrado($_POST["sitioweb"]);
     }
 }
+
 ?>
->>>>>>> 6cf94bb28123cd272b1b5ec64a098781b3a850a4
+
+<ul>
+    <?php if (isset($errores)) {
+        foreach ($errores as $error) {
+            echo "<li> $error </li>";
+        }
+    }
+    ?>
+</ul>
