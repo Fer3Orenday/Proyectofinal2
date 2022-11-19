@@ -7,18 +7,11 @@
     <title>Document</title>
      <!--------------------- ULISES ---------------------------------------------->
 
-     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-color: pink ;
-             font-family: 'Staatliches', cursive; 
-        }
-    </style>
+
 
     <!-- --------------------------------  -->
 </head>
 <body>
-    <!-- holaa -->
-    <!-- que ondaaa -->
+   
 </body>
 </html>
