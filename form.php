@@ -54,3 +54,23 @@
    
 </body>
 </html>
+<?php
+function filtrado($datos)
+{
+    $datos = trim($datos); // Elimina espacios antes y después de los datos
+    $datos = stripslashes($datos); // Elimina backslashes \
+    $datos = htmlspecialchars($datos); // Traduce caracteres especiales en entidades HTML
+    return $datos;
+}
+
+if (isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = filtrado($_POST["nombre"]);
+    $password = filtrado($_POST["password"]);
+    $educacion = filtrado($_POST["educacion"]);
+    $nacionalidad = filtrado($_POST["nacionalidad"]);
+    // Utilizamos implode para pasar el array a string
+    $idiomas = filtrado(implode(", ", $_POST["idiomas"]));
+    $email = filtrado($_POST["email"]);
+    $sitioweb = filtrado($_POST["sitioweb"]);
+}
+?> 
